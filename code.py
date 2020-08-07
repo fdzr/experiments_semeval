@@ -39,7 +39,7 @@ def train_model(languages):
         sentences_corpus_1.extend(sentences_corpus_2)
         corpus = sentences_corpus_1
 
-        model = Word2Vec(corpus, min_count=1, sg=1, size=200, negative=5, window=2)
+        model = Word2Vec(corpus, min_count=1, sg=0, size=100, negative=5, window=5)
         models[language]= model
 
     return models
@@ -66,7 +66,7 @@ def main():
                 score = 1 - spatial.distance.cosine(target_t1, target_t2)
                 ranking[target] = score
 
-                if score <= 0.50:
+                if score <= 0.61:
                     f_out.write('\t'.join((target, str(1) + '\n')))
                 else:
                     f_out.write('\t'.join((target, str(0) + '\n')))
