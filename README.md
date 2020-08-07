@@ -1,8 +1,10 @@
 # This is the repository to execute the experiments for SemEval 2020 Task 1.
 
-##Instructions
+## Instructions
+
 ```bash
-chmod u+x run_train_model.sh\
+chmod u+x run_train_model.sh
+
 ./run_train_model.sh
 ```
 
