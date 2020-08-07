@@ -4,7 +4,6 @@
 
 ```bash
 chmod u+x run_train_model.sh
-
 ./run_train_model.sh
 ```
 
