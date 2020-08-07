@@ -64,7 +64,7 @@ def main():
                 target_t2 = models[language][f"{target}_t2"]
 
                 score = 1 - spatial.distance.cosine(target_t1, target_t2)
-                ranking[target] = score
+                ranking[target] = float(score)
 
                 if score <= 0.61:
                     f_out.write('\t'.join((target, str(1) + '\n')))
@@ -72,6 +72,7 @@ def main():
                     f_out.write('\t'.join((target, str(0) + '\n')))
 
         with open(f"answer/task2/{language}.txt", "w", encoding="utf-8") as f_out:
+            sorted(ranking.items(), key=lambda kv: kv[1])
             for key, value in ranking.items():
                 f_out.write('\t'.join((key, str(value) + '\n')))
 
