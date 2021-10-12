@@ -2,14 +2,7 @@
 
 ## Some notes
 
-This work is based on the subtask 1.
+Deprecated code, the updated code will be available soon.
 
-## Instructions
 
-```bash
-chmod u+x run_train_model.sh
-./run_train_model.sh
-```
-
-See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
 
